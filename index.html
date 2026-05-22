@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Restaurant Causal Inference Demo — Sandeep Grover</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
@@ -42,81 +41,32 @@ footer{text-align:center;padding:32px;color:var(--muted);font-size:.82rem;border
 </style>
 </head>
 <body>
-
 <nav>
   <a href="https://sandyyy123.github.io" class="nav-back">← Portfolio</a>
   <span class="nav-title">Restaurant Causal Inference Demo</span>
   <a href="https://github.com/Sandyyy123/restaurant-causal-inference-demo" target="_blank" class="nav-back" style="margin-left:auto">GitHub ↗</a>
 </nav>
-
 <div class="hero">
   <h1>Restaurant Causal Inference Demo</h1>
   <p>DiD + two-way fixed effects measuring AI coaching lift on average check size across 6-7 restaurant locations, with synthetic control robustness check.</p>
   <div class="badges"><span class="badge">DiD</span> <span class="badge">statsmodels</span> <span class="badge">Synthetic Control</span></div>
   <div class="metric-bar">✦ MDE ~$0.85 (~4.4% lift) · 80% power</div>
 </div>
-
 <div class="card">
   <div class="section-title">Interactive Demo</div>
-  <div class="highlight">DiD estimate: +$1.40 lift (4.4%) | p=0.021 | Power 80%</div>
-  <p style="font-size:.82rem;color:#94a3b8;margin-bottom:16px">AI Coaching Lift: Avg Check Size (DiD Estimate)</p>
-  <div class="demo-container">
-<canvas id="myChart"></canvas>
-<script>
-new Chart(document.getElementById('myChart'), {
-  type: 'line',
-  data: {
-    labels: ["Month 1", "Month 2", "Month 3", "Month 4", "Month 5", "Month 6"],
-    datasets: [
-      {
-        label: 'Treatment (AI Coaching)',
-        data: [19.2, 19.45, 19.71, 20.12, 20.48, 20.91],
-        borderColor: 'rgba(99,102,241,0.9)',
-        backgroundColor: 'rgba(99,102,241,0.08)',
-        fill: true,
-        tension: 0.35,
-        pointRadius: 3,
-        borderWidth: 2.5
-      },
-      {
-        label: 'Control (No Coaching)',
-        data: [19.18, 19.22, 19.31, 19.38, 19.42, 19.51],
-        borderColor: 'rgba(148,163,184,0.55)',
-        backgroundColor: 'transparent',
-        borderDash: [5,4],
-        tension: 0.35,
-        pointRadius: 2,
-        borderWidth: 1.5
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    interaction: { intersect: false, mode: 'index' },
-    plugins: {
-      legend: { labels: { color: '#94a3b8', font: { size: 12 } } },
-      tooltip: { backgroundColor: 'rgba(15,17,32,0.95)', borderColor: 'rgba(99,102,241,0.3)', borderWidth: 1 }
-    },
-    scales: {
-      y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8' } },
-      x: { grid: { display: false }, ticks: { color: '#94a3b8', maxTicksLimit: 12 } }
-    }
-  }
-});
-</script></div>
+  <div class="highlight">DiD estimate: +$1.40 lift (4.4%) | p=0.021</div>
+  <p style="font-size:.82rem;color:#94a3b8;margin-bottom:16px">AI Coaching Lift: Avg Check Size (DiD)</p>
+  <div class="demo-container"><canvas id="myChart"></canvas><script>
+new Chart(document.getElementById('myChart'),{type:'line',data:{labels:["Month 1", "Month 2", "Month 3", "Month 4", "Month 5", "Month 6"],datasets:[{label:'Treatment (AI Coaching)',data:[19.2, 19.45, 19.71, 20.12, 20.48, 20.91],borderColor:'rgba(99,102,241,0.9)',backgroundColor:'rgba(99,102,241,0.08)',fill:true,tension:0.35,pointRadius:3,borderWidth:2.5},{label:'Control (No Coaching)',data:[19.18, 19.22, 19.31, 19.38, 19.42, 19.51],borderColor:'rgba(148,163,184,0.55)',backgroundColor:'transparent',borderDash:[5,4],tension:0.35,pointRadius:2,borderWidth:1.5}]},options:{responsive:true,interaction:{intersect:false,mode:'index'},plugins:{legend:{labels:{color:'#94a3b8'}},tooltip:{backgroundColor:'rgba(15,17,32,0.95)',borderColor:'rgba(99,102,241,0.3)',borderWidth:1}},scales:{y:{grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#94a3b8'}},x:{grid:{display:false},ticks:{color:'#94a3b8',maxTicksLimit:10}}}}});</script></div>
   <div class="stats-grid"><div class="stat-box"><span class="stat-value">7</span><span class="stat-label">Locations</span></div><div class="stat-box"><span class="stat-value">+$1.40</span><span class="stat-label">DiD Lift</span></div><div class="stat-box"><span class="stat-value">0.021</span><span class="stat-label">p-value</span></div><div class="stat-box"><span class="stat-value">80%</span><span class="stat-label">Power</span></div></div>
 </div>
-
 <div class="card">
   <div class="section-title">Tech Stack</div>
   <div class="badges" style="margin-bottom:0"><span class="badge">DiD</span> <span class="badge">statsmodels</span> <span class="badge">Synthetic Control</span></div>
 </div>
-
 <footer>
-  <p>Built by <a href="https://sandyyy123.github.io">Sandeep Grover</a> ·
-     <a href="https://github.com/Sandyyy123/restaurant-causal-inference-demo" target="_blank">GitHub Repo</a> ·
-     <a href="https://linkedin.com/in/sandeep-grover-b3192a16" target="_blank">LinkedIn</a></p>
+  <p>Built by <a href="https://sandyyy123.github.io">Sandeep Grover</a> &nbsp;·&nbsp;
+     <a href="https://github.com/Sandyyy123/restaurant-causal-inference-demo" target="_blank">View on GitHub</a></p>
 </footer>
-
 </body>
 </html>
